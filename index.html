@@ -1,0 +1,3413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Princess May Torida — Student Leader, Journalist, Broadcaster, Athlete and Dreamer."
+    >
+
+    <meta name="theme-color" content="#e95b9f">
+
+    <title>Princess May Torida | Student Leader</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================================================
+   PRINCESS MAY TORIDA
+   COQUETTE PRINCESS PORTFOLIO
+========================================================= */
+
+:root {
+    --pink-dark: #9e2862;
+    --pink-deep: #7e1f4e;
+    --pink: #e95b9f;
+    --pink-bright: #f477b3;
+    --pink-light: #ffb6d9;
+    --pink-pale: #ffe4f0;
+    --pink-soft: #fff3f8;
+
+    --white: #ffffff;
+
+    --text: #602544;
+    --text-light: #8d5570;
+
+    --gold: #dca847;
+    --gold-light: #f5d98b;
+
+    --shadow:
+        0 20px 60px rgba(168, 45, 104, 0.16);
+
+    --shadow-heavy:
+        0 30px 90px rgba(126, 31, 78, 0.22);
+
+    --glass:
+        rgba(255, 255, 255, 0.58);
+
+    --radius: 28px;
+
+    --transition:
+        0.35s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            #ffd9eb 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 10%,
+            #ffc6df 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            #ffe7f1 0%,
+            transparent 35%
+        ),
+        #fff8fb;
+
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+::selection {
+    background: var(--pink);
+    color: white;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   BACKGROUND PARTICLES
+========================================================= */
+
+.background-particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-particles::before,
+.background-particles::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: .4;
+}
+
+.background-particles::before {
+    width: 400px;
+    height: 400px;
+    background: #ffc1dd;
+    top: 20%;
+    left: -150px;
+    animation: ambientMove 12s ease-in-out infinite alternate;
+}
+
+.background-particles::after {
+    width: 450px;
+    height: 450px;
+    background: #ffdced;
+    right: -170px;
+    bottom: 10%;
+    animation: ambientMove 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes ambientMove {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(50px, -40px) scale(1.15);
+    }
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1100px, 92%);
+
+    padding: 14px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 999;
+
+    border: 1px solid rgba(255, 255, 255, .8);
+
+    background:
+        rgba(255, 255, 255, .58);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 15px 40px rgba(145, 46, 91, .12);
+
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    top: 10px;
+
+    background:
+        rgba(255,255,255,.78);
+
+    box-shadow:
+        0 18px 50px rgba(145,46,91,.18);
+}
+
+.nav-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+
+    color: var(--pink-dark);
+
+    text-decoration: none;
+}
+
+.nav-logo span {
+    margin-right: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -7px;
+    left: 50%;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--pink);
+
+    transform: translateX(-50%);
+
+    transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--pink-dark);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.6);
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    width: 19px;
+    height: 2px;
+
+    background: var(--pink-dark);
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 130px 20px 80px;
+
+    overflow: hidden;
+}
+
+.hero-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(15px);
+}
+
+.hero-glow-one {
+    width: 600px;
+    height: 600px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,166,208,.5),
+            transparent 70%
+        );
+
+    animation: breathe 5s infinite alternate;
+}
+
+.hero-glow-two {
+    width: 300px;
+    height: 300px;
+
+    right: 5%;
+    bottom: 10%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,218,235,.7),
+            transparent 70%
+        );
+
+    animation: floatGlow 7s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    from {
+        transform: scale(.9);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes floatGlow {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-30px, -30px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    animation: heroAppear 1.2s ease both;
+}
+
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.crown {
+    color: var(--gold);
+
+    font-size: 58px;
+
+    margin-bottom: 10px;
+
+    animation:
+        crownFloat 3s ease-in-out infinite;
+}
+
+@keyframes crownFloat {
+    0%,100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+.mini-title {
+    letter-spacing: 5px;
+
+    color: var(--pink-dark);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+
+    font-size:
+        clamp(70px, 12vw, 150px);
+
+    line-height: .83;
+
+    color: var(--text);
+
+    font-weight: 400;
+}
+
+.hero h1 span {
+    color: var(--pink);
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 1.25em;
+
+    position: relative;
+
+    text-shadow:
+        0 5px 30px rgba(233,91,159,.2);
+}
+
+.hero h1 span::after {
+    content: "";
+
+    position: absolute;
+
+    height: 12px;
+
+    background: rgba(255,182,217,.5);
+
+    bottom: 5px;
+
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+
+    border-radius: 50%;
+}
+
+.royal-line {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.royal-line div {
+    height: 1px;
+
+    width: 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--pink),
+            transparent
+        );
+}
+
+.hero-subtitle {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    color: var(--pink-dark);
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    text-decoration: none;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: var(--transition);
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(255,255,255,.45) 50%,
+            transparent 80%
+        );
+
+    transform: translateX(-120%);
+
+    transition: .7s;
+}
+
+.btn:hover::before {
+    transform: translateX(120%);
+}
+
+.primary-btn {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e84f96,
+            #bd3d78
+        );
+
+    box-shadow:
+        0 12px 30px rgba(189,61,120,.3);
+}
+
+.primary-btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(189,61,120,.4);
+}
+
+.outline-btn {
+    color: var(--pink-dark);
+
+    border:
+        1px solid var(--pink-light);
+
+    background:
+        rgba(255,255,255,.45);
+}
+
+.outline-btn:hover {
+    background: var(--pink);
+
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   HERO DECORATIONS
+========================================================= */
+
+.hero-decoration {
+    position: absolute;
+
+    font-size: 120px;
+
+    opacity: .13;
+
+    filter: blur(.3px);
+
+    animation:
+        ribbonFloat 5s ease-in-out infinite;
+}
+
+.ribbon-left {
+    left: 4%;
+    top: 30%;
+}
+
+.ribbon-right {
+    right: 4%;
+    bottom: 25%;
+
+    animation-delay: 1s;
+}
+
+@keyframes ribbonFloat {
+    0%,100% {
+        transform:
+            rotate(-8deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(8deg)
+            translateY(-25px);
+    }
+}
+
+.scroll-down {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--pink-dark);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    animation:
+        scrollBounce 2s infinite;
+}
+
+.scroll-down div {
+    font-size: 20px;
+}
+
+@keyframes scrollBounce {
+    0%,100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 8px);
+    }
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+    padding: 120px 7%;
+
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 70px;
+}
+
+.section-title p {
+    color: var(--pink);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size:
+        clamp(45px, 7vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.section-title h2 span {
+    font-family: "Great Vibes", cursive;
+
+    color: var(--pink);
+}
+
+.title-line {
+    color: var(--pink);
+
+    margin-top: 20px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   GLASS
+========================================================= */
+
+.glass-card {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.68),
+            rgba(255,255,255,.42)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.85);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.about-card {
+    padding: 40px;
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,182,217,.2);
+
+    right: -70px;
+    bottom: -70px;
+}
+
+.about-card:hover {
+    transform:
+        translateY(-12px)
+        rotate(.5deg);
+
+    box-shadow:
+        0 30px 70px rgba(168,45,104,.18);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pink-pale);
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.about-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: var(--text-light);
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PINK SECTION
+========================================================= */
+
+.pink-section {
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #ffe1ee
+        );
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+    max-width: 900px;
+
+    margin: auto;
+
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            var(--pink),
+            transparent
+        );
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 90px;
+
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: 0;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border:
+        2px solid
+        var(--pink-light);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(168,45,104,.15);
+
+    z-index: 2;
+}
+
+.timeline-content {
+    padding: 30px;
+
+    border-radius: 25px;
+
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateX(7px);
+}
+
+.timeline-label {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--pink);
+
+    font-weight: 700;
+}
+
+.timeline-content h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin: 8px 0 10px;
+}
+
+.timeline-content p {
+    color: var(--text-light);
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.cards-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 40px;
+
+    min-height: 260px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    border:
+        1px solid
+        #ffd8e9;
+
+    transition: var(--transition);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "♡";
+
+    position: absolute;
+
+    right: 20px;
+    top: 10px;
+
+    font-size: 80px;
+
+    color: #ffe8f2;
+
+    font-family: serif;
+
+    transition: .5s;
+}
+
+.feature-card:hover::before {
+    transform:
+        rotate(15deg)
+        scale(1.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            #fff0f7
+        );
+
+    box-shadow:
+        0 25px 50px rgba(168,45,104,.15);
+}
+
+.feature-icon {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+
+    line-height: 1.7;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   JOURNALISM
+========================================================= */
+
+.journalism-section {
+    padding: 120px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d2449,
+            #a62d66
+        );
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.journalism-content {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.journalism-text .mini-title {
+    color: #ffc5de;
+}
+
+.journalism-text h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size:
+        clamp(55px, 7vw, 90px);
+
+    line-height: .9;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+.journalism-text h2 span {
+    font-family: "Great Vibes", cursive;
+
+    color: #ffb2d5;
+}
+
+.journalism-text > p:not(.mini-title) {
+    line-height: 1.9;
+
+    color: #ffe4ef;
+
+    max-width: 600px;
+}
+
+.journalism-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.journalism-tags span {
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.1);
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   MICROPHONE
+========================================================= */
+
+.microphone {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    height: 400px;
+}
+
+.mic-circle {
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ff9fc8,
+            #d74b89
+        );
+
+    box-shadow:
+        0 0 0 30px rgba(255,255,255,.04),
+        0 0 0 60px rgba(255,255,255,.03),
+        0 0 80px rgba(255,150,198,.4);
+
+    animation: micPulse 3s infinite;
+}
+
+@keyframes micPulse {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px 50px;
+}
+
+.skill-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.skill-header span:last-child {
+    color: var(--pink);
+}
+
+.skill-bar {
+    height: 8px;
+
+    background: #f7dce8;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+
+    width: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff9bc7,
+            #c83e7c
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        width 1.5s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+.skill-progress::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.8),
+            transparent
+        );
+
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievement-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.achievement-card {
+    background:
+        rgba(255,255,255,.6);
+
+    border:
+        1px solid white;
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 20px 50px rgba(168,45,104,.15);
+}
+
+.achievement-number {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 50px;
+
+    color: var(--pink-light);
+
+    margin-bottom: 10px;
+}
+
+.achievement-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    color: var(--text-light);
+
+    line-height: 1.7;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   VISION
+========================================================= */
+
+.vision-section {
+    padding: 130px 7%;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffd2e5,
+            #fff8fb 70%
+        );
+}
+
+.vision-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 70px 40px;
+
+    border-radius: 40px;
+
+    background:
+        rgba(255,255,255,.7);
+
+    border:
+        1px solid white;
+
+    box-shadow:
+        0 30px 80px rgba(168,45,104,.12);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.vision-ribbon {
+    position: absolute;
+
+    top: -10px;
+    right: 25px;
+
+    font-size: 100px;
+
+    opacity: .1;
+}
+
+.vision-card .crown {
+    font-size: 45px;
+}
+
+.vision-card h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size:
+        clamp(40px, 6vw, 70px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 20px 0;
+}
+
+.vision-card h2 span {
+    color: var(--pink);
+
+    font-family: "Great Vibes", cursive;
+}
+
+.vision-card > p:not(.mini-title) {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--text-light);
+
+    line-height: 1.9;
+
+    font-size: 14px;
+}
+
+.signature {
+    font-family: "Great Vibes", cursive;
+
+    color: var(--pink-dark);
+
+    font-size: 40px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    background: #fff7fa;
+}
+
+.contact-card {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 60px 40px;
+
+    border-radius: 35px;
+}
+
+.contact-crown {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    max-width: 600px;
+
+    margin:
+        0 auto 30px;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+        #571c39;
+
+    color: white;
+}
+
+.footer-ribbon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+footer h3 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 40px;
+
+    font-weight: 400;
+}
+
+footer p {
+    color: #eebbd1;
+
+    font-size: 11px;
+
+    margin-top: 10px;
+}
+
+.footer-line {
+    width: 100px;
+
+    height: 1px;
+
+    background: #b95c82;
+
+    margin: 25px auto;
+}
+
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.sparkle {
+    position: fixed;
+
+    pointer-events: none;
+
+    color: #f47eb2;
+
+    font-size: 12px;
+
+    z-index: 9999;
+
+    animation:
+        sparkleFade .8s forwards;
+}
+
+@keyframes sparkleFade {
+    0% {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            scale(2)
+            translateY(-20px)
+            rotate(180deg);
+    }
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: .35;
+
+    animation:
+        heartFloat linear forwards;
+}
+
+@keyframes heartFloat {
+    from {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .35;
+    }
+
+    to {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .about-grid,
+    .cards-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .achievement-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .journalism-content {
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        top: 10px;
+
+        padding: 10px 15px;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        background:
+            rgba(255,255,255,.96);
+
+        backdrop-filter: blur(20px);
+
+        -webkit-backdrop-filter: blur(20px);
+
+        border:
+            1px solid
+            rgba(255,255,255,.9);
+
+        border-radius: 25px;
+
+        box-shadow:
+            0 20px 40px rgba(168,45,104,.15);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(-10px);
+
+        transition: .3s;
+    }
+
+    nav.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0);
+    }
+
+    nav a {
+        font-size: 12px;
+
+        padding: 6px;
+    }
+
+    .hero {
+        padding-top: 130px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-decoration {
+        font-size: 70px;
+    }
+
+    .section {
+        padding: 85px 6%;
+    }
+
+    .section-title {
+        margin-bottom: 50px;
+    }
+
+    .about-grid,
+    .cards-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        padding-left: 70px;
+    }
+
+    .timeline::before {
+        left: 24px;
+    }
+
+    .timeline-dot {
+        width: 50px;
+        height: 50px;
+
+        font-size: 20px;
+    }
+
+    .timeline-content {
+        padding: 25px;
+    }
+
+    .timeline-content h3 {
+        font-size: 23px;
+    }
+
+    .journalism-section {
+        padding: 90px 6%;
+    }
+
+    .journalism-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .journalism-text h2 {
+        font-size: 60px;
+    }
+
+    .microphone {
+        height: 250px;
+    }
+
+    .mic-circle {
+        width: 180px;
+        height: 180px;
+
+        font-size: 75px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-card {
+        padding: 50px 25px;
+    }
+
+    .contact-card {
+        padding: 45px 25px;
+    }
+
+    .contact-card h3 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .mini-title {
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Decorative background -->
+    <div class="background-particles" aria-hidden="true"></div>
+    <div class="sparkle-container" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="#home" class="nav-logo" aria-label="Princess May home">
+            <span>🎀</span> PMT
+        </a>
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu" aria-label="Main navigation">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#journey">Journey</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="hero-decoration ribbon-left" aria-hidden="true">
+                🎀
+            </div>
+
+            <div class="hero-decoration ribbon-right" aria-hidden="true">
+                🎀
+            </div>
+
+            <div class="hero-content">
+
+                <div class="crown" aria-hidden="true">♕</div>
+
+                <p class="mini-title">
+                    WELCOME TO MY LITTLE WORLD
+                </p>
+
+                <h1>
+                    Princess <span>May</span>
+                    <br>
+                    Torida
+                </h1>
+
+                <div class="royal-line" aria-hidden="true">
+                    <span>♡</span>
+                    <div></div>
+                    <span>✦</span>
+                    <div></div>
+                    <span>♡</span>
+                </div>
+
+                <p class="hero-subtitle">
+                    Student Leader • Journalist • Broadcaster • Athlete • Dancer
+                </p>
+
+                <p class="hero-description">
+                    A Grade 10 student with dreams bigger than the stars,
+                    a heart dedicated to leadership, and a passion for learning,
+                    service, creativity, and excellence.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn primary-btn">
+                        Discover My Story ✨
+                    </a>
+
+                    <a href="#leadership" class="btn outline-btn">
+                        My Leadership 👑
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="scroll-down" aria-hidden="true">
+                <span>SCROLL TO EXPLORE</span>
+                <div>↓</div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about" class="section">
+
+            <div class="section-title reveal">
+
+                <p>♡ GET TO KNOW ME ♡</p>
+
+                <h2>
+                    A Girl With
+                    <span>Big Dreams</span>
+                </h2>
+
+                <div class="title-line">
+                    🎀 ───────── ✦ ───────── 🎀
+                </div>
+
+            </div>
+
+            <div class="about-grid">
+
+                <article class="about-card glass-card reveal">
+
+                    <div class="card-icon">👑</div>
+
+                    <h3>Who Am I?</h3>
+
+                    <p>
+                        I am <strong>Princess May Torida</strong>, a Grade 10
+                        student of Mapurao Integrated Learning School (MILS).
+                        I believe that being a student is not only about
+                        learning inside the classroom, but also about
+                        discovering one's purpose, serving others, and
+                        creating positive change.
+                    </p>
+
+                </article>
+
+
+                <article class="about-card glass-card reveal">
+
+                    <div class="card-icon">🎀</div>
+
+                    <h3>My Dreams</h3>
+
+                    <p>
+                        I aspire to become an
+                        <strong>SSLG President for School Year 2027–2028</strong>
+                        and an aspiring
+                        <strong>Municipal Federated SSLG President of
+                        Allacapan District</strong>.
+                    </p>
+
+                </article>
+
+
+                <article class="about-card glass-card reveal">
+
+                    <div class="card-icon">✨</div>
+
+                    <h3>My Philosophy</h3>
+
+                    <p>
+                        Leadership is not about standing above everyone.
+                        It is about standing beside people, listening to them,
+                        learning with them, and helping them grow.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LEADERSHIP
+        ========================== -->
+
+        <section id="leadership" class="section pink-section">
+
+            <div class="section-title reveal">
+
+                <p>♕ MY LEADERSHIP JOURNEY ♕</p>
+
+                <h2>
+                    Leading With
+                    <span>Heart</span>
+                </h2>
+
+                <div class="title-line">
+                    🎀 ───── ✦ ───── 🎀
+                </div>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <article class="timeline-item reveal">
+
+                    <div class="timeline-dot">👑</div>
+
+                    <div class="timeline-content glass-card">
+
+                        <span class="timeline-label">
+                            ASPIRATION
+                        </span>
+
+                        <h3>
+                            SSLG President 2027–2028
+                        </h3>
+
+                        <p>
+                            Preparing to serve as an aspiring Supreme Secondary
+                            Learner Government President, with a vision of
+                            student-centered leadership, unity, responsibility,
+                            and meaningful student participation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="timeline-item reveal">
+
+                    <div class="timeline-dot">🎀</div>
+
+                    <div class="timeline-content glass-card">
+
+                        <span class="timeline-label">
+                            MUNICIPAL LEADERSHIP
+                        </span>
+
+                        <h3>
+                            Municipal Federated SSLG President
+                        </h3>
+
+                        <p>
+                            Aspiring to represent and serve student leaders
+                            across the Allacapan District through collaboration,
+                            communication, and youth-centered initiatives.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="timeline-item reveal">
+
+                    <div class="timeline-dot">💗</div>
+
+                    <div class="timeline-content glass-card">
+
+                        <span class="timeline-label">
+                            YOUTH LEADERSHIP
+                        </span>
+
+                        <h3>
+                            Allied Youth Leaders — AYL
+                        </h3>
+
+                        <p>
+                            One of the Allied Youth Leaders, an organization
+                            bringing together student leaders around Allacapan
+                            to develop leadership, teamwork, and service.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="timeline-item reveal">
+
+                    <div class="timeline-dot">🌸</div>
+
+                    <div class="timeline-content glass-card">
+
+                        <span class="timeline-label">
+                            SCOUTING
+                        </span>
+
+                        <h3>
+                            Girl Scouts of the Philippines
+                        </h3>
+
+                        <p>
+                            Senior Scout committed to developing leadership,
+                            discipline, teamwork, service, confidence,
+                            and responsibility.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             JOURNEY
+        ========================== -->
+
+        <section id="journey" class="section">
+
+            <div class="section-title reveal">
+
+                <p>🌷 MY MANY SIDES 🌷</p>
+
+                <h2>
+                    More Than
+                    <span>One Dream</span>
+                </h2>
+
+                <div class="title-line">
+                    🎀 ───────── ✦ ───────── 🎀
+                </div>
+
+            </div>
+
+
+            <div class="cards-grid">
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">🏐</div>
+
+                    <h3>Volleyball Player</h3>
+
+                    <p>
+                        Passionate about volleyball and the lessons it teaches:
+                        teamwork, discipline, resilience, and trust.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">💃</div>
+
+                    <h3>Dancer</h3>
+
+                    <p>
+                        Expressing creativity, confidence, and emotion through
+                        movement and performance.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">📰</div>
+
+                    <h3>Student Journalist</h3>
+
+                    <p>
+                        A school paper writer and News Editor who believes
+                        in responsible storytelling and giving students a voice.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">🎙️</div>
+
+                    <h3>Broadcaster</h3>
+
+                    <p>
+                        Filipino Radio Broadcasting Reporter and English
+                        Radio Broadcasting Anchor 2.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">💻</div>
+
+                    <h3>Technology Learner</h3>
+
+                    <p>
+                        ATP trainee learning Microsoft applications, coding,
+                        PowerPoint, productivity tools, and other software.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card reveal">
+
+                    <div class="feature-icon">🌟</div>
+
+                    <h3>Student Achiever</h3>
+
+                    <p>
+                        Continuously striving to become one of the most
+                        outstanding student journalists and learners.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             JOURNALISM
+        ========================== -->
+
+        <section class="journalism-section">
+
+            <div class="journalism-content">
+
+                <div class="journalism-text reveal">
+
+                    <p class="mini-title">
+                        📰 BEHIND THE STORIES
+                    </p>
+
+                    <h2>
+                        My Voice,
+                        <br>
+                        <span>My Story.</span>
+                    </h2>
+
+                    <p>
+                        Journalism taught me that every person has a story worth
+                        hearing. Through writing and broadcasting, I continue to
+                        discover the power of words and the responsibility that
+                        comes with sharing information.
+                    </p>
+
+                    <div class="journalism-tags">
+
+                        <span>NEWS EDITOR</span>
+                        <span>SCHOOL PAPER WRITER</span>
+                        <span>FILIPINO REPORTER</span>
+                        <span>ENGLISH ANCHOR 2</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="microphone reveal" aria-hidden="true">
+
+                    <div class="mic-circle">
+                        🎙️
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section id="skills" class="section">
+
+            <div class="section-title reveal">
+
+                <p>💻 WHAT I'M LEARNING</p>
+
+                <h2>
+                    Skills &
+                    <span>Interests</span>
+                </h2>
+
+                <div class="title-line">
+                    🎀 ───────── ✦ ───────── 🎀
+                </div>
+
+            </div>
+
+
+            <div class="skills-container">
+
+                <div class="skill reveal">
+
+                    <div class="skill-header">
+                        <span>Leadership</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div
+                            class="skill-progress" style="width: 90%;" data-progress="90"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-header">
+                        <span>Journalism</span>
+                        <span>92%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div
+                            class="skill-progress" style="width: 92%;" data-progress="92"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-header">
+                        <span>Broadcasting</span>
+                        <span>88%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div
+                            class="skill-progress" style="width: 88%;" data-progress="88"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-header">
+                        <span>Microsoft & Productivity Tools</span>
+                        <span>82%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div
+                            class="skill-progress" style="width: 82%;" data-progress="82"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-header">
+                        <span>Public Speaking</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div
+                            class="skill-progress" style="width: 90%;" data-progress="90"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill reveal">
+
+                    <div class="skill-header">
+                        <span>Creativity</span>
+                        <span>95%</span>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div
+                            class="skill-progress" style="width: 95%;" data-progress="95"
+                        ></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACHIEVEMENTS
+        ========================== -->
+
+        <section id="achievements" class="section pink-section">
+
+            <div class="section-title reveal">
+
+                <p>🏆 LITTLE CROWNS ALONG THE WAY</p>
+
+                <h2>
+                    My
+                    <span>Achievements</span>
+                </h2>
+
+                <div class="title-line">
+                    🎀 ───── ✦ ───── 🎀
+                </div>
+
+            </div>
+
+
+            <div class="achievement-grid">
+
+                <article class="achievement-card reveal">
+
+                    <div class="achievement-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Outstanding Student Journalist
+                    </h3>
+
+                    <p>
+                        Recognized for dedication and participation
+                        in student journalism.
+                    </p>
+
+                </article>
+
+
+                <article class="achievement-card reveal">
+
+                    <div class="achievement-number">
+                        02
+                    </div>
+
+                    <h3>
+                        School Paper — News Editor
+                    </h3>
+
+                    <p>
+                        Serving as a student writer and News Editor,
+                        helping create meaningful school stories.
+                    </p>
+
+                </article>
+
+
+                <article class="achievement-card reveal">
+
+                    <div class="achievement-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Radio Broadcasting
+                    </h3>
+
+                    <p>
+                        Filipino Radio Broadcasting Reporter and
+                        English Radio Broadcasting Anchor 2.
+                    </p>
+
+                </article>
+
+
+                <article class="achievement-card reveal">
+
+                    <div class="achievement-number">
+                        04
+                    </div>
+
+                    <h3>
+                        ATP Trainee
+                    </h3>
+
+                    <p>
+                        Developing digital skills through learning
+                        Microsoft tools, coding, PowerPoint, and more.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VISION
+        ========================== -->
+
+        <section class="vision-section">
+
+            <div class="vision-card reveal">
+
+                <div class="vision-ribbon" aria-hidden="true">
+                    🎀
+                </div>
+
+                <div class="crown" aria-hidden="true">
+                    ♕
+                </div>
+
+                <p class="mini-title">
+                    MY LEADERSHIP VISION
+                </p>
+
+                <h2>
+                    "Leadership begins
+                    <span>with listening.</span>"
+                </h2>
+
+                <p>
+                    I want to become a leader who listens to students,
+                    values every voice, encourages participation,
+                    promotes unity, and turns ideas into meaningful action.
+                </p>
+
+                <div class="signature">
+                    Princess May
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="section-title reveal">
+
+                <p>💌 LET'S CONNECT</p>
+
+                <h2>
+                    Thank You For
+                    <span>Visiting</span>
+                </h2>
+
+                <div class="title-line">
+                    🎀 ───────── ✦ ───────── 🎀
+                </div>
+
+            </div>
+
+
+            <div class="contact-card glass-card reveal">
+
+                <div class="contact-crown">
+                    👑
+                </div>
+
+                <h3>
+                    Keep dreaming.
+                    <br>
+                    Keep learning.
+                    <br>
+                    Keep leading.
+                </h3>
+
+                <p>
+                    This is only the beginning of my journey.
+                    There are still many stories to write,
+                    stages to stand on, people to serve,
+                    and dreams to chase.
+                </p>
+
+                <a href="#home" class="btn primary-btn">
+                    Back To The Top ↑
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-ribbon">
+            🎀
+        </div>
+
+        <h3>
+            Princess May Torida
+        </h3>
+
+        <p>
+            Student Leader • Journalist • Broadcaster • Athlete • Dreamer
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 Princess May Torida. Made with ♡, dreams & sparkles.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        /* =========================================================
+   PRINCESS MAY TORIDA
+   INTERACTIVE JAVASCRIPT
+========================================================= */
+
+"use strict";
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+const navbar = document.querySelector(".navbar");
+
+const navLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("section[id]");
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const skillBars = document.querySelectorAll(".skill-progress");
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+if (menuBtn && navMenu) {
+
+    menuBtn.addEventListener("click", () => {
+
+        const isOpen =
+            navMenu.classList.toggle("active");
+
+        menuBtn.classList.toggle(
+            "active",
+            isOpen
+        );
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        document.body.classList.toggle(
+            "menu-open",
+            isOpen
+        );
+
+    });
+
+
+    /*
+        Close the menu after clicking
+        a navigation link.
+    */
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("active");
+
+            menuBtn.classList.remove("active");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            document.body.classList.remove(
+                "menu-open"
+            );
+
+        });
+
+    });
+
+}
+
+
+/* =========================================================
+   NAVBAR SCROLL EFFECT
+========================================================= */
+
+function updateNavbar() {
+
+    if (!navbar) return;
+
+    if (window.scrollY > 40) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+}
+
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    { passive: true }
+);
+
+updateNavbar();
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+function updateActiveNavigation() {
+
+    let currentSection = "";
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 180;
+
+        const sectionBottom =
+            sectionTop + section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionBottom
+        ) {
+
+            currentSection =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        const target =
+            link.getAttribute("href");
+
+        if (
+            target ===
+            `#${currentSection}`
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+);
+
+updateActiveNavigation();
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   SKILL BAR ANIMATION
+========================================================= */
+
+const skillObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                const bar =
+                    entry.target;
+
+                const progress =
+                    bar.dataset.progress || 0;
+
+                bar.style.width =
+                    `${progress}%`;
+
+                skillObserver.unobserve(bar);
+
+            });
+
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
+
+skillBars.forEach(bar => {
+
+    skillObserver.observe(bar);
+
+});
+
+
+/* =========================================================
+   MOUSE SPARKLES
+========================================================= */
+
+let lastSparkleTime = 0;
+
+document.addEventListener(
+    "mousemove",
+    event => {
+
+        const now =
+            Date.now();
+
+        /*
+            Limit sparkle creation so
+            weaker phones don't get flooded
+            with DOM elements.
+        */
+
+        if (
+            now - lastSparkleTime < 65
+        ) {
+            return;
+        }
+
+        if (
+            Math.random() > .72
+        ) {
+
+            createSparkle(
+                event.clientX,
+                event.clientY
+            );
+
+            lastSparkleTime = now;
+
+        }
+
+    }
+);
+
+
+function createSparkle(x, y) {
+
+    const sparkle =
+        document.createElement("div");
+
+    sparkle.className =
+        "sparkle";
+
+    const symbols = [
+        "✦",
+        "✧",
+        "♡",
+        "✿",
+        "⋆"
+    ];
+
+    const colors = [
+        "#ef72ad",
+        "#ff9bc7",
+        "#d94b8b",
+        "#e5b452"
+    ];
+
+    sparkle.textContent =
+        symbols[
+            Math.floor(
+                Math.random() *
+                symbols.length
+            )
+        ];
+
+    sparkle.style.left =
+        `${x}px`;
+
+    sparkle.style.top =
+        `${y}px`;
+
+    sparkle.style.color =
+        colors[
+            Math.floor(
+                Math.random() *
+                colors.length
+            )
+        ];
+
+    sparkle.style.fontSize =
+        `${8 + Math.random() * 9}px`;
+
+    document.body.appendChild(
+        sparkle
+    );
+
+    setTimeout(() => {
+
+        sparkle.remove();
+
+    }, 800);
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+let heartInterval;
+
+
+function createHeart() {
+
+    /*
+        Don't create floating objects
+        when the tab isn't visible.
+    */
+
+    if (
+        document.hidden
+    ) {
+        return;
+    }
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    const hearts = [
+        "♡",
+        "♥",
+        "🎀",
+        "✦",
+        "🌸"
+    ];
+
+    heart.textContent =
+        hearts[
+            Math.floor(
+                Math.random() *
+                hearts.length
+            )
+        ];
+
+    heart.style.left =
+        `${Math.random() * 100}vw`;
+
+    heart.style.fontSize =
+        `${10 + Math.random() * 18}px`;
+
+    heart.style.animationDuration =
+        `${8 + Math.random() * 8}s`;
+
+    document.body.appendChild(
+        heart
+    );
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 16000);
+
+}
+
+
+function startHeartAnimation() {
+
+    heartInterval =
+        setInterval(
+            createHeart,
+            1400
+        );
+
+}
+
+
+function stopHeartAnimation() {
+
+    clearInterval(
+        heartInterval
+    );
+
+}
+
+
+startHeartAnimation();
+
+
+/* =========================================================
+   BUTTON RIPPLE EFFECT
+========================================================= */
+
+document.querySelectorAll(".btn")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function(event) {
+
+                const ripple =
+                    document.createElement(
+                        "span"
+                    );
+
+                ripple.style.position =
+                    "absolute";
+
+                ripple.style.width =
+                    "10px";
+
+                ripple.style.height =
+                    "10px";
+
+                ripple.style.background =
+                    "rgba(255,255,255,.65)";
+
+                ripple.style.borderRadius =
+                    "50%";
+
+                ripple.style.pointerEvents =
+                    "none";
+
+                ripple.style.left =
+                    `${event.offsetX}px`;
+
+                ripple.style.top =
+                    `${event.offsetY}px`;
+
+                ripple.style.transform =
+                    "translate(-50%, -50%)";
+
+                ripple.style.animation =
+                    "buttonRipple .6s linear";
+
+                this.appendChild(
+                    ripple
+                );
+
+                setTimeout(() => {
+
+                    ripple.remove();
+
+                }, 600);
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   ADD RIPPLE ANIMATION
+========================================================= */
+
+const rippleStyle =
+    document.createElement("style");
+
+rippleStyle.textContent = `
+    @keyframes buttonRipple {
+        from {
+            width: 10px;
+            height: 10px;
+            opacity: .8;
+        }
+
+        to {
+            width: 350px;
+            height: 350px;
+            opacity: 0;
+        }
+    }
+`;
+
+document.head.appendChild(
+    rippleStyle
+);
+
+
+/* =========================================================
+   PAUSE DECORATIONS WHEN TAB IS HIDDEN
+========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        if (document.hidden) {
+
+            stopHeartAnimation();
+
+        } else {
+
+            startHeartAnimation();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   ESCAPE KEY
+   Closes mobile menu.
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            navMenu &&
+            navMenu.classList.contains("active")
+        ) {
+
+            navMenu.classList.remove(
+                "active"
+            );
+
+            menuBtn.classList.remove(
+                "active"
+            );
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            document.body.classList.remove(
+                "menu-open"
+            );
+
+        }
+
+    }
+);
+
+    </script>
+
+</body>
+</html>
